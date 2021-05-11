@@ -1,1 +1,1 @@
-web: sh setup.sh && streamlit run stockana.py
+worker: sh setup.sh && streamlit run stockana.py
