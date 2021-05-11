@@ -11,7 +11,7 @@ st.write('---')
 st.sidebar.subheader('Query parameters')
 start_date = st.sidebar.date_input("Start date", datetime.date(2020, 1, 1))
 end_date = st.sidebar.date_input("End date", datetime.date(2021, 1, 31))
-ticker_list = pd.read_csv('https://github.com/ShaneGon/cloudproject/blob/31f0e4f3ae54a9ab03838a50891dd11b38f01309/nifty50.csv')
+ticker_list = pd.read_csv('https://github.com/ShaneGon/cloudproject/blob/31f0e4f3ae54a9ab03838a50891dd11b38f01309/nifty50.csv',error_bad_lines=False)
 yahoo_symbols = ticker_list.Yahoo_Symbol.to_list()
 tickerSymbol = st.sidebar.selectbox('Stock ticker', yahoo_symbols) # Select ticker symbol
 tickerData = yf.Ticker(tickerSymbol) # Get ticker data
