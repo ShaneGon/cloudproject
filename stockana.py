@@ -45,17 +45,6 @@ qf.add_bollinger_bands()
 fig = qf.iplot(asFigure=True)
 st.plotly_chart(fig)
 
-# Technicl indicator analysis
-st.header('**Technical analysis chart**')
-qf.add_sma([10,20],width=2,color=['green','lightgreen'],legendgroup=True)
-qf.add_rsi(periods=20,color='java')
-qf.add_bollinger_bands(periods=20,boll_std=2,colors=['magenta','grey'],fill=True)
-qf.add_volume()
-qf.add_macd()
-fig = qf.iplot(asFigure=True)
-st.plotly_chart(fig)
-
-
 ####
 #st.write('---')
 #st.write(tickerData.info)
