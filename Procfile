@@ -1,1 +1,1 @@
-web: sh setup.sh && streamlit run stockana.py
+web: gunicorn sh setup.sh && streamlit run stockana.py
